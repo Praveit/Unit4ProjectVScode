@@ -13,11 +13,11 @@ var weather;
     if (!weather || !temperature) {
       document.getElementById("result").textContent = "Please enter both weather and temperature.";
       blankimg();
-    } else if ((weather == "Sunny" || weather == "Cloudy") && (temperature == "Hot" || temperature == "Mild")) {
+    } else if ((weather == "Sunny" || weather == "Cloudy") && (temperature > 80 || temperature > 70)) {
       document.getElementById("weather").src = weather + ".png";
       document.getElementById("clothes").src = "Vacation.png";
       document.getElementById("result").textContent = "You should wear a T-Shirt";
-    } else if ((weather == "Cloudy" || weather == "Sunny") && temperature == "Cold") {
+    } else if ((weather == "Cloudy" || weather == "Sunny") && temperature < 60) {
       document.getElementById("weather").src = weather + ".png";
       document.getElementById("clothes").src = "Sweatshirt.png";
       document.getElementById("result").textContent = "You should wear a Sweatshirt";
